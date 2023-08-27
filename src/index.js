@@ -83,6 +83,7 @@ function onClickLoadMore() {
           "We're sorry, but you've reached the end of search results.",
           paramsForNotify
         );
+        
         btnLoadMore.removeEventListener('click', onClickLoadMore);
         window.removeEventListener('scroll', showLoadMorePage);
       }
@@ -90,6 +91,7 @@ function onClickLoadMore() {
     })
     .catch(onFetchError);
 }
+
 
 function onFetchError() {
   Notify.failure(
